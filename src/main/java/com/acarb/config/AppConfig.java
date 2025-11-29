@@ -8,8 +8,13 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @Configuration
 public class AppConfig {
 
-    @Bean // O Spring usará esse método para criar o objeto BCrypt
+    /**
+     * Define o Bean PasswordEncoder (BCrypt) para criptografia de senhas.
+     * Este bean será injetado automaticamente (Autowired) no LoginService.
+     */
+    @Bean
     public PasswordEncoder passwordEncoder() {
+        // BCrypt é o algoritmo padrão e mais recomendado para criptografia de senhas.
         return new BCryptPasswordEncoder();
     }
 }
