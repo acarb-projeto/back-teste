@@ -26,8 +26,7 @@ public class SolicitacaoServico {
     private Carro carro;
 
     // Relacionamento Many-to-One: O tipo de serviço
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_tipo_servico_fk", referencedColumnName = "id_tipo_servico")
+    @Enumerated(EnumType.STRING)
     private TipoServico tipoServico;
 
     // Status da solicitação (usando a Enum criada acima)

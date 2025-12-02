@@ -14,6 +14,7 @@ public class Motorista {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_motorista")
     private Long id;
 
     @Column(nullable = false, length = 100)

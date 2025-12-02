@@ -14,6 +14,7 @@ public class PrestadorDeServico {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_prestador")
     private Long id;
 
     @Column(nullable = false, length = 150)
@@ -29,7 +30,6 @@ public class PrestadorDeServico {
     private String telefone;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
     private TipoServico tipoServico;
 
 
